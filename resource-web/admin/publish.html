@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发布新资源</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body onload="checkAuth()">
+<div class="layout">
+  <div class="sidebar">
+    <h3>管理菜单</h3>
+    <a href="dashboard.html">📁 全部资源</a>
+    <a href="publish.html">➕ 发布新资源</a>
+    <a href="javascript:logout()">🚪 退出登录</a>
+  </div>
+  <div class="main">
+    <div class="card">
+      <h3>发布新资源</h3>
+      <input type="text" id="title" placeholder="资源标题">
+      <select id="category">
+        <option value="软件">软件</option>
+        <option value="教程">教程</option>
+        <option value="素材">素材</option>
+        <option value="源码">源码</option>
+        <option value="其他">其他</option>
+      </select>
+      <textarea id="desc" placeholder="资源介绍、提取码、使用说明"></textarea>
+      <input type="text" id="coverUrl" placeholder="封面图片直链（图床链接）">
+      <input type="text" id="fileUrl" placeholder="资源下载链接（网盘直链）">
+      <button class="btn btn-blue" onclick="submitResource()">确认发布</button>
+    </div>
+  </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
